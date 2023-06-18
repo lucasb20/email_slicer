@@ -1,7 +1,7 @@
 import re
 
 def verifica_nome(nome):
-    padrao = r'^[a-zA-Z0-9]+$'
+    padrao = r'^[a-zA-Z0-9.]+$'
     correspondencia = re.match(padrao, nome)
     if correspondencia:
         return True
@@ -9,7 +9,7 @@ def verifica_nome(nome):
         return False
 
 def verifica_dominio(texto):
-    padrao = r'^[A-Za-z]+[.][A-Za-z]+$'
+    padrao = r'^[A-Za-z]+([.][A-Za-z]+)+$'
     correspondencia = re.match(padrao, texto)
     if correspondencia:
         return True
